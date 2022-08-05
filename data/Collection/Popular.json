@@ -1,0 +1,299 @@
+[
+    {
+        "id":"1",
+        "title":"Radium Animated Monster",
+        "items":13,
+        "wish":11.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"rasselmrh",
+                "image":"assets/images/seller/collector-4.gif",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":1,
+                "image":"assets/images/nft-item/category/02.gif"
+            },
+            {
+                "id":2,
+                "image":"assets/images/nft-item/category/03.gif"
+            },
+            {
+                "id":3,
+                "image":"assets/images/nft-item/category/01.gif"
+            },
+            {
+                "id":4,
+                "image":"assets/images/nft-item/category/02.gif"
+            }
+        ]
+    },
+    {
+        "id":"2",
+        "title":"Digital CryptoArt",
+        "items":11,
+        "wish":10.5,
+        "users": [
+            {
+                "id":"1",
+                "name":"nazmulKhalid",
+                "image":"assets/images/seller/collector-10.png",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":5,
+                "image":"assets/images/nft-item/category/2.jpg"
+            },
+            {
+                "id":6,
+                "image":"assets/images/nft-item/category/3.jpg"
+            },
+            {
+                "id":7,
+                "image":"assets/images/nft-item/category/1.jpg"
+            },
+            {
+                "id":8,
+                "image":"assets/images/nft-item/category/2.jpg"
+            }
+        ]
+    },
+    {
+        "id":"3",
+        "title":"Radium Animated Monster",
+        "items":14,
+        "wish":4.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"Mimi_Chao",
+                "image":"assets/images/seller/collector-3.gif",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/04.gif"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/05.gif"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/06.gif"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/04.gif"
+            }
+        ]
+    },
+    {
+        "id":"4",
+        "title":"Smart Owls",
+        "items":16,
+        "wish":4.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"rasselmrh",
+                "image":"assets/images/seller/collector-2.png",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/002.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/003.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/001.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/002.jpg"
+            }
+        ]
+    },
+    {
+        "id":"5",
+        "title":"Da Cute Monster",
+        "items":21,
+        "wish":11.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"monstaz",
+                "image":"assets/images/seller/collector-2.gif",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/b1.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/b2.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/b3.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/b1.jpg"
+            }
+        ]
+    },
+    {
+        "id":"6",
+        "title":"Super Herox",
+        "items":31,
+        "wish":4.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"laurax orbo",
+                "image":"assets/images/seller/collector-5.png",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/h1.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/h2.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/h3.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/h1.jpg"
+            }
+        ]
+    },
+    {
+        "id":"7",
+        "title":"Honey babeee",
+        "items":14,
+        "wish":4.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"@xar_spacer",
+                "image":"assets/images/seller/collector-2.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/r1.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/r2.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/r3.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/r1.jpg"
+            }
+        ]
+    },
+    {
+        "id":"8",
+        "title":"My Pickachooz",
+        "items":15,
+        "wish":2.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"@pichasu",
+                "image":"assets/images/seller/collector-3.png",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/p1.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/p2.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/p3.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/p1.jpg"
+            }
+        ]
+    },
+    {
+        "id":"9",
+        "title":"The Octopax",
+        "items":14,
+        "wish":4.3,
+        "users": [
+            {
+                "id":"1",
+                "name":"OktaX so",
+                "image":"assets/images/seller/collector-1.gif",
+                "verified": false,
+                "prfileLink":"/"
+            }
+        ],
+        "products":[
+            {
+                "id":9,
+                "image":"assets/images/nft-item/category/o1.jpg"
+            },
+            {
+                "id":10,
+                "image":"assets/images/nft-item/category/o2.jpg"
+            },
+            {
+                "id":11,
+                "image":"assets/images/nft-item/category/o3.jpg"
+            },
+            {
+                "id":12,
+                "image":"assets/images/nft-item/category/o1.jpg"
+            }
+        ]
+    }
+]

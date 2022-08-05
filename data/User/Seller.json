@@ -1,0 +1,100 @@
+[
+
+    {
+        "id":"1",
+        "name":"Gihan Fernindo",
+        "image":"assets/images/seller/collector-1.png",
+        "thumbnail":"assets/images/nft-item/style-2/01.jpg",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"3,002.98",
+        "increament":38.78,
+        "sales":"25004"
+    },
+    {
+        "id":"2",
+        "name":"X31le eko Fernindo",
+        "image":"assets/images/seller/collector-2.gif",
+        "thumbnail":"assets/images/nft-item/style-2/02.jpg",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"12,002.48",
+        "increament":-2.78,
+        "sales":"22004"
+        
+    },
+    {
+        "id":"3",
+        "name":"Jhon Doe",
+        "image":"assets/images/seller/collector-1.png",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"3,002.98",
+        "increament":18.8,
+        "sales":"4820"
+    },
+    {
+        "id":"4",
+        "name":"drexa_3xo",
+        "image":"assets/images/seller/collector-1.png",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"23,002.98",
+        "increament":-23.81,
+        "sales":"3698"
+    },
+    {
+        "id":"5",
+        "name":"rox zipper",
+        "image":"assets/images/seller/collector-6.png",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"20,02.98",
+        "increament":48.38,
+        "sales":"3698"
+    },
+    {
+        "id":"6",
+        "name":"@Anra-_uido",
+        "image":"assets/images/seller/collector-3.gif",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"23,002.98",
+        "increament":-8.78,
+        "sales":"3698"
+    },
+    {
+        "id":"7",
+        "name":"rassel_mrh",
+        "image":"assets/images/seller/collector-4.gif",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"93,002.98",
+        "increament":88.78,
+        "sales":"3698"
+    },
+    {
+        "id":"8",
+        "name":"holder don",
+        "image":"assets/images/seller/collector-7.png",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"23,002.98",
+        "increament":3.7,
+        "sales":"3698"
+    },
+    {
+        "id":"9",
+        "name":"rub_3l",
+        "image":"assets/images/seller/collector-1.gif",
+        "verified": true,
+        "prfileLink":"/",
+        "collected":"3,002.98",
+        "increament":31.78,
+        "sales":"3698"
+    }
+
+    
+    
+    
+]

@@ -1,0 +1,188 @@
+[
+    {
+        "id": 1,
+        "image": "assets/images/nft-item/01.jpg",
+        "wishlist": "1.3",
+        "expiredate": "2023-01-25",
+        "title": "Walking On Air",
+        "stock": "12",
+        "price": "0.34",
+        "owners": [
+            {
+                "id":"1",
+                "name":"",
+                "image":"assets/images/seller/collector-1.png",
+                "verified": false,
+                "prfileLink":"/"
+            },
+            {
+                "id":"2",
+                "name":"Jhon Doe",
+                "image":"assets/images/seller/collector-2.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 2,
+        "image": "assets/images/nft-item/05.gif",
+        "wishlist": "4.3",
+        "expiredate": "2022-12-26",
+        "title": "Fly'n Higher space",
+        "stock": "12",
+        "price": "0.39",
+        "owners": [
+            {
+                "id":"3",
+                "name":"",
+                "image":"assets/images/seller/collector-5.png",
+                "verified": false,
+                "prfileLink":"/"
+            },
+            {
+                "id":"4",
+                "name":"Xofor#-4",
+                "image":"assets/images/seller/collector-4.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 3,
+        "image": "assets/images/nft-item/05.jpg",
+        "wishlist": "1.3",
+        "expiredate": "2022-10-26",
+        "title": "Dodo je Aliener Walk",
+        "stock": "5",
+        "price": "0.64",
+        "owners": [
+            {
+                "id":"5",
+                "name":"",
+                "image":"assets/images/seller/collector-3.png",
+                "verified": false,
+                "prfileLink":"/"
+            },
+            {
+                "id":"6",
+                "name":"Elix_Qe",
+                "image":"assets/images/seller/collector-6.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 4,
+        "image": "assets/images/nft-item/04.jpg",
+        "wishlist": "1.3",
+        "expiredate": "2023-03-26",
+        "title": "MimiChika Cartos",
+        "stock": "17",
+        "price": "0.94",
+        "owners": [
+            {
+                "id":"7",
+                "name":"Mimi_Chao",
+                "image":"assets/images/seller/collector-7.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 5,
+        "image": "assets/images/nft-item/02.gif",
+        "wishlist": "1.3",
+        "expiredate": "2023-04-26",
+        "title": "Eye Balls#2",
+        "stock": "12",
+        "price": "0.34",
+        "owners": [
+            
+            {
+                "id":"9",
+                "name":"nazmul",
+                "image":"assets/images/seller/collector-2.gif",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 6,
+        "image": "assets/images/nft-item/02.jpg",
+        "wishlist": "1.3",
+        "expiredate": "2023-04-26",
+        "title": "Fly'n Higher space",
+        "stock": "12",
+        "price": "0.34",
+        "owners": [
+            {
+                "id":"9",
+                "name":"3lix_zxe",
+                "image":"assets/images/seller/collector-4.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 7,
+        "image": "assets/images/nft-item/03.jpg",
+        "wishlist": "1.3",
+        "expiredate": "2023-04-26",
+        "title": "Dodo je Aliener Walk",
+        "stock": "12",
+        "price": "0.64",
+        "owners": [
+            {
+                "id":"8",
+                "name":"",
+                "image":"assets/images/seller/collector-1.gif",
+                "verified": false,
+                "prfileLink":"/"
+            },
+            {
+                "id":"9",
+                "name":"khalid#-06",
+                "image":"assets/images/seller/collector-6.png",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    },
+    {
+        "id": 8,
+        "image": "assets/images/nft-item/03.gif",
+        "wishlist": "1.3",
+        "expiredate": "2023-04-26",
+        "title": "3black _spiDer",
+        "stock": "12",
+        "price": "0.94",
+        "owners": [
+            
+            {
+                "id":"9",
+                "name":"Naka_@siga ",
+                "image":"assets/images/seller/collector-3.gif",
+                "verified": true,
+                "prfileLink":"/"
+            }
+        ]
+       
+    }
+    
+    
+    
+    
+]

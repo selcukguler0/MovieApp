@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "image": "assets/images/category/cat-1.png",
+        "name": "Art Work"
+       
+    },
+    {
+        "id": 2,
+        "image": "assets/images/category/cat-2.png",
+        "name": "Music"
+       
+    },
+    {
+        "id": 3,
+        "image": "assets/images/category/cat-3.png",
+        "name": "Utility"
+       
+    },
+    {
+        "id": 4,
+        "image": "assets/images/category/cat-4.png",
+        "name": "Sports"
+       
+    },
+    {
+        "id": 5,
+        "image": "assets/images/category/cat-5.png",
+        "name": "Collectibles"
+       
+    },
+    {
+        "id": 6,
+        "image": "assets/images/category/cat-6.png",
+        "name": "Cards"
+       
+    },
+    {
+        "id": 7,
+        "image": "assets/images/category/cat-7.png",
+        "name": "Metaverse"
+       
+    },
+    {
+        "id": 8,
+        "image": "assets/images/category/cat-8.png",
+        "name": "Domain"
+       
+    }
+    
+    
+    
+]

@@ -5,21 +5,22 @@ import Image from "next/image";
 import { InfinitySpin } from "react-loader-spinner"; //Loader
 import SearchMovie from "../pages/api/searchMovies";
 
+import { useSession, signOut, signIn } from "next-auth/react";
+
 const Header = () => {
 	const router = useRouter();
 	const [search, setSearch] = useState("");
 	const [movies, setMovies] = useState(null);
 	const searchRef = useRef(null);
+	const { data: session } = useSession();
 	useEffect(() => {
 		if (typeof document !== undefined) {
 			require("bootstrap/dist/js/bootstrap");
 		}
 	}, []);
-	
+
 	const searchHandler = async (e) => {
 		setSearch(e.target.value);
-		console.log("search", search);
-		console.log("search length", search.length);
 		if (search.length < 2) {
 			document.getElementById("search-results").style.display = "none";
 			setMovies(null);
@@ -32,14 +33,18 @@ const Header = () => {
 	const onClickHandler = () => {
 		setSearch("");
 		document.getElementById("search-results").style.display = "none";
-	}
+	};
 	const onBlurHandler = () => {
 		// timeout for not show immidiately
 		setTimeout(() => {
 			document.getElementById("search-results").style.display = "none";
 		}, 100);
 	};
-
+	if (session) {
+		<div style={{ display: "flex", justifyContent: "center" }}>
+			<InfinitySpin width="200" color="#4fa94d" />
+		</div>;
+	}
 	return (
 		<div className="test">
 			<header className="header">
@@ -163,7 +168,7 @@ const Header = () => {
 												</a>
 											</Link>
 										</li>
-										
+
 										<li>
 											<Link href="/explore">
 												<a
@@ -178,12 +183,13 @@ const Header = () => {
 										</li>
 									</ul>
 								</li>
-
-								<li className="header__nav-item">
-									<Link href="/profile">
-										<a className="header__nav-link">Profile</a>
-									</Link>
-								</li>
+								{session ? (
+									<li className="header__nav-item">
+										<Link href="/profile">
+											<a className="header__nav-link">Profile</a>
+										</Link>
+									</li>
+								) : null}
 							</ul>
 						</div>
 
@@ -207,70 +213,80 @@ const Header = () => {
 											<i className="icofont-user"></i>
 										</span>{" "}
 										{/* Username */}
-										<span className="d-none d-md-inline">Alex Joe</span>
+										<span className="d-none d-md-inline">{session ? session.user.name : "Join"}</span>
 									</a>
 
 									<ul className="dropdown-menu">
-										<li>
-											<Link href="/profile">
-												<a
-													className={
-														router.pathname == "/activity"
-															? "dropdown-item active"
-															: "dropdown-item"
-													}>
-													<span className="me-1">
-														<i className="icofont-lightning-ray"></i>
-													</span>
-													Activity
-												</a>
-											</Link>
-										</li>
-										<li>
-											<Link href="/signup">
-												<a
-													className={
-														router.pathname == "/signup"
-															? "dropdown-item active"
-															: "dropdown-item"
-													}>
-													<span className="me-1">
-														<i className="icofont-space-shuttle"></i>
-													</span>
-													Sign Up
-												</a>
-											</Link>
-										</li>
+										{session ? (
+											<li>
+												<Link href="/profile">
+													<a
+														className={
+															router.pathname == "/profile"
+																? "dropdown-item active"
+																: "dropdown-item"
+														}>
+														<span className="me-1">
+															<i className="icofont-lightning-ray"></i>
+														</span>
+														Profile
+													</a>
+												</Link>
+											</li>
+										) : null}
+										{!session ? (
+											<>
+												<li>
+													<button
+														onClick={() => signUp()}
+														className={
+															router.pathname == "/signup"
+																? "dropdown-item active"
+																: "dropdown-item"
+														}>
+														<span className="me-1">
+															<i className="icofont-space-shuttle"></i>
+														</span>
+														Sign Up
+													</button>
+												</li>
 
-										<li>
-											<Link href="/signin">
-												<a
-													className={
-														router.pathname == "/signin"
-															? "dropdown-item active"
-															: "dropdown-item"
-													}>
-													<span className="me-1">
-														<i className="icofont-login"></i>
-													</span>
-													Sign In
-												</a>
-											</Link>
-										</li>
+												<li>
+													<button
+														onClick={() => signIn()}
+														className={
+															router.pathname == "/signin"
+																? "dropdown-item active"
+																: "dropdown-item"
+														}>
+														<span className="me-1">
+															<i className="icofont-login"></i>
+														</span>
+														Sign In
+													</button>
+												</li>
+											</>
+										) : null}
 
-										<li>
-											<hr className="dropdown-divider"></hr>
-										</li>
+										{session ? (
+											<>
+												<li>
+													<hr style={{backgroundColor: "white"}} className="dropdown-divider"></hr>
+												</li>
 
-										<li>
-											<a className="dropdown-item" href="#">
-												{" "}
-												Sign Out{" "}
-												<span className="ms-1">
-													<i className="icofont-logout"></i>
-												</span>
-											</a>
-										</li>
+												<li>
+													<button
+														className="dropdown-item"
+														onClick={() => signOut()}>
+														{" "}
+														Sign Out{" "}
+														<span className="ms-1">
+															<i className="icofont-logout"></i>
+														</span>
+													</button>
+												</li>
+											</>
+										) : null}
 									</ul>
 								</div>
 							</div>

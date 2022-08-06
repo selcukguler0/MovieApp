@@ -5,12 +5,16 @@ import Link from 'next/link';
 import GetRandomMovies from '../pages/api/getRandomMovies';
 import { InfinitySpin } from "react-loader-spinner";//Loader
 
+import { useSession, signIn, signOut } from "next-auth/react";
+
 const Banner = () => {
 	const [BannerImageListOne, setBannerImageListOne] = useState(null);
 	const [BannerImageListTwo, setBannerImageListTwo] = useState(null);
 	const [BannerImageListThree, setBannerImageListThree] = useState(null);
 	const [BannerImageListFour, setBannerImageListFour] = useState(null);
 
+	const {data: session} = useSession();
+	console.log("useSession", session);
 	//http://image.tmdb.org/t/p/w500/your_poster_path.jpg
 	useEffect(() => {
 		async function fetchData() {
@@ -30,9 +34,13 @@ const Banner = () => {
 		}
 		fetchData();
 	}, []);
-	    
-	
-	if (!BannerImageListOne || !BannerImageListTwo || !BannerImageListThree || !BannerImageListFour) {
+
+	if (
+		!BannerImageListOne ||
+		!BannerImageListTwo ||
+		!BannerImageListThree ||
+		!BannerImageListFour
+	) {
 		return (
 			<div style={{ display: "flex", justifyContent: "center" }}>
 				<InfinitySpin width="200" color="#4fa94d" />
@@ -57,11 +65,13 @@ const Banner = () => {
 											</a>
 										</Link>
 
-										<Link href="/signin">
-											<a className="default-btn style-2 move-right">
-												<span>SignUp</span>
-											</a>
-										</Link>
+										{!session ? (
+											<button
+											style={{border: "none"}}
+											onClick={() => signIn()}
+											className="default-btn style-2 move-right">
+											<span>SignUp / SignIn</span>
+										</button>) : null}
 									</div>
 								</div>
 							</div>
@@ -111,6 +121,6 @@ const Banner = () => {
 			</section>
 		</div>
 	);
-}
+};
 
 export default Banner;

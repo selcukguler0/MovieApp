@@ -6,7 +6,7 @@ import TrendingNow from '../components/TrendingNow';
 const Home = () => {
   return (
 		<div>
-			<Banner />
+			<Banner/>
 			<Category />
 			<RandomMovies />
 			<TrendingNow />

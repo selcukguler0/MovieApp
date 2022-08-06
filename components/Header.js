@@ -220,23 +220,6 @@ const Header = () => {
 									</a>
 
 									<ul className="dropdown-menu">
-										{session ? (
-											<li>
-												<Link href="/profile">
-													<a
-														className={
-															router.pathname == "/profile"
-																? "dropdown-item active"
-																: "dropdown-item"
-														}>
-														<span className="me-1">
-															<i className="icofont-lightning-ray"></i>
-														</span>
-														Profile
-													</a>
-												</Link>
-											</li>
-										) : null}
 										{!session ? (
 											<>
 												<li>
@@ -264,25 +247,17 @@ const Header = () => {
 										) : null}
 
 										{session ? (
-											<>
-												<li>
-													<hr
-														style={{ backgroundColor: "white" }}
-														className="dropdown-divider"></hr>
-												</li>
-
-												<li>
-													<button
-														className="dropdown-item"
-														onClick={() => signOut()}>
-														{" "}
-														Sign Out{" "}
-														<span className="ms-1">
-															<i className="icofont-logout"></i>
-														</span>
-													</button>
-												</li>
-											</>
+											<li>
+												<button
+													className="dropdown-item"
+													onClick={() => signOut()}>
+													{" "}
+													Sign Out{" "}
+													<span className="ms-1">
+														<i className="icofont-logout"></i>
+													</span>
+												</button>
+											</li>
 										) : null}
 									</ul>
 								</div>

@@ -12,7 +12,7 @@ const Banner = () => {
 	const [BannerImageListTwo, setBannerImageListTwo] = useState(null);
 	const [BannerImageListThree, setBannerImageListThree] = useState(null);
 	const [BannerImageListFour, setBannerImageListFour] = useState(null);
-
+	const [popup, setPopUp] = useState(false);
 	const {data: session} = useSession();
 	console.log("useSession", session);
 	//http://image.tmdb.org/t/p/w500/your_poster_path.jpg
@@ -35,6 +35,24 @@ const Banner = () => {
 		fetchData();
 	}, []);
 
+	// PopUp SignIN 
+	useEffect(() => {
+		console.log("useEffect called");
+		if (popup && !session) {
+			console.log(screen.width);
+			const left = (screen.width - 400) / 2;
+			console.log("left", left);
+			setPopUp(false);
+			window.open(
+				"/api/auth/signin",
+				"SignIn",
+				`left=${left},top=100,width=400,height=500`
+			);
+		} else if (session) {
+			window.close();
+		}
+	}, [popup, session]);
+	
 	if (
 		!BannerImageListOne ||
 		!BannerImageListTwo ||
@@ -67,11 +85,12 @@ const Banner = () => {
 
 										{!session ? (
 											<button
-											style={{border: "none"}}
-											onClick={() => signIn()}
-											className="default-btn style-2 move-right">
-											<span>SignUp / SignIn</span>
-										</button>) : null}
+												style={{ border: "none" }}
+												onClick={() => setPopUp(true)}
+												className="default-btn style-2 move-right">
+												<span>SignUp / SignIn</span>
+											</button>
+										) : null}
 									</div>
 								</div>
 							</div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { InfinitySpin } from "react-loader-spinner"; //Loader
 import SearchMovie from "../pages/api/searchMovies";
 
-import { useSession, signOut, signIn } from "next-auth/react";
+import { useSession, signOut, signIn} from "next-auth/react";
 
 const Header = () => {
 	const router = useRouter();
@@ -13,15 +13,34 @@ const Header = () => {
 	const [movies, setMovies] = useState(null);
 	const searchRef = useRef(null);
 	const { data: session } = useSession();
+	const [popup, setPopUp] = useState(false);
+
 	useEffect(() => {
 		if (typeof document !== undefined) {
 			require("bootstrap/dist/js/bootstrap");
 		}
 	}, []);
+	// PopUp SignIN
+	useEffect(() => {
+		console.log("useEffect called");
+		if (popup && !session) {
+			console.log(screen.width);
+			const left = (screen.width - 400) / 2;
+			console.log("left", left);
+			setPopUp(false);
+			window.open(
+				"/api/auth/signin",
+				"SignIn",
+				`left=${left},top=100,width=400,height=500`
+			);
+		} else if (session) {
+			window.close();
+		}
+	}, [popup, session]);
 
 	const searchHandler = async (e) => {
 		setSearch(e.target.value);
-		if (search.length < 2) {
+		if (search.length < 2 || !search) {
 			document.getElementById("search-results").style.display = "none";
 			setMovies(null);
 		} else {
@@ -213,7 +232,9 @@ const Header = () => {
 											<i className="icofont-user"></i>
 										</span>{" "}
 										{/* Username */}
-										<span className="d-none d-md-inline">{session ? session.user.name : "Join"}</span>
+										<span className="d-none d-md-inline">
+											{session ? session.user.name : "Join"}
+										</span>
 									</a>
 
 									<ul className="dropdown-menu">
@@ -238,12 +259,8 @@ const Header = () => {
 											<>
 												<li>
 													<button
-														onClick={() => signUp()}
-														className={
-															router.pathname == "/signup"
-																? "dropdown-item active"
-																: "dropdown-item"
-														}>
+														onClick={() => setPopUp(true)}
+														className={"dropdown-item"}>
 														<span className="me-1">
 															<i className="icofont-space-shuttle"></i>
 														</span>
@@ -253,12 +270,8 @@ const Header = () => {
 
 												<li>
 													<button
-														onClick={() => signIn()}
-														className={
-															router.pathname == "/signin"
-																? "dropdown-item active"
-																: "dropdown-item"
-														}>
+														onClick={() => setPopUp(true)}
+														className={"dropdown-item"}>
 														<span className="me-1">
 															<i className="icofont-login"></i>
 														</span>
@@ -271,7 +284,9 @@ const Header = () => {
 										{session ? (
 											<>
 												<li>
-													<hr style={{backgroundColor: "white"}} className="dropdown-divider"></hr>
+													<hr
+														style={{ backgroundColor: "white" }}
+														className="dropdown-divider"></hr>
 												</li>
 
 												<li>

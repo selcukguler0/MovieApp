@@ -162,7 +162,7 @@ const Author = () => {
 											role="tab"
 											aria-controls="allNft"
 											aria-selected="true">
-											All NFT
+											Movies
 										</button>
 										<button
 											className="nav-link"
@@ -243,8 +243,8 @@ const Author = () => {
 																		role="tab"
 																		aria-controls="pills-mentions"
 																		aria-selected="true">
-																		<i className="icofont-flash"></i>
-																		On Sale
+																		<i className="icofont-like"></i>{""}
+																		Liked Movies
 																	</button>
 																</li>
 																<li className="nav-item" role="presentation">
@@ -257,8 +257,8 @@ const Author = () => {
 																		role="tab"
 																		aria-controls="pills-favorites"
 																		aria-selected="false">
-																		<i className="icofont-license"></i>
-																		owned
+																		<i className="icofont-save"></i>{" "}
+																		Saved Movies
 																	</button>
 																</li>
 
@@ -398,28 +398,7 @@ const Author = () => {
 
 												<div className="col-xl-3">
 													<aside className="mt-5 mt-xl-0">
-														<div className="profile-widget search-widget">
-															<div className="widget-inner">
-																<div className="widget-title">
-																	<h5>Search NFT</h5>
-																</div>
-																<div className="widget-content">
-																	<p>Search from best Rarest NFT collections</p>
-																	<div className="form-floating nft-search-input">
-																		<input
-																			type="text"
-																			className="form-control"
-																			placeholder="Search NFT"
-																		/>
-																		<label>Search NFT</label>
-																		<button type="button">
-																			{" "}
-																			<i className="icofont-search-1"></i>
-																		</button>
-																	</div>
-																</div>
-															</div>
-														</div>
+														
 														<div className="widget widget-instagram">
 															<div className="widget-header">
 																<h5 className="title">Latest Liked Movies</h5>
@@ -428,9 +407,11 @@ const Author = () => {
 																{featuredProduct.map((item) => (
 																	<li key={item.id}>
 																		<a>
-																			<img
+																			<Image
+																				height={240}
+																				width={240}
 																				loading="lazy"
-																				src={`${item.image}`}
+																				src={`/${item.image}`}
 																				alt="nft-img"
 																			/>
 																		</a>

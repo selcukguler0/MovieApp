@@ -34,7 +34,10 @@ const Header = () => {
 		document.getElementById("search-results").style.display = "none";
 	}
 	const onBlurHandler = () => {
-		document.getElementById("search-results").style.display = "none";
+		// timeout for not show immidiately
+		setTimeout(() => {
+			document.getElementById("search-results").style.display = "none";
+		}, 100);
 	};
 
 	return (
@@ -93,7 +96,7 @@ const Header = () => {
 															alt="search-bar-movie-image"
 														/>
 														<a
-															style={{color: "white"}}
+															style={{ color: "white" }}
 															className={
 																router.pathname == "/upcoming_movies"
 																	? "drop-down-item active"
@@ -149,22 +152,23 @@ const Header = () => {
 											</Link>
 										</li>
 										<li>
-											<Link href="/upcoming_movies">
+											<Link href="/populer">
 												<a
 													className={
-														router.pathname == "/upcoming_movies"
+														router.pathname == "/populer"
 															? "drop-down-item active"
 															: "drop-down-item"
 													}>
-													New Releases
+													Populer Movies
 												</a>
 											</Link>
 										</li>
+										
 										<li>
-											<Link href="/upcoming_movies">
+											<Link href="/explore">
 												<a
 													className={
-														router.pathname == "/upcoming_movies"
+														router.pathname == "/explore"
 															? "drop-down-item active"
 															: "drop-down-item"
 													}>
@@ -176,7 +180,7 @@ const Header = () => {
 								</li>
 
 								<li className="header__nav-item">
-									<Link href="#">
+									<Link href="/profile">
 										<a className="header__nav-link">Profile</a>
 									</Link>
 								</li>

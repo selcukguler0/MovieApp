@@ -8,7 +8,7 @@ import Image from "next/image";
 const MovieDetails = () => {
 	const router = useRouter();
 	const [details, setDetails] = useState(null);
-	const id = router.query[":id"];
+	const id = router.query.id;
 	useEffect(() => {
 		async function fetchData() {
 			//Math.floor(Math.random() * 100) random movies every time
@@ -24,12 +24,7 @@ const MovieDetails = () => {
 			</div>
 		);
 	}
-	console.log(details);
-	details.production_companies.map((item) => {
-		console.log(item);
-		console.log(item.logo_path);
-		
-	})
+
 	return (
 		<div>
 			<div className="item-details-section padding-top padding-bottom">
@@ -117,12 +112,20 @@ const MovieDetails = () => {
 														id="nav-details"
 														role="tabpanel"
 														aria-labelledby="nav-details-tab">
-														<Image
-															width={200}
-															height={200}
-															alt="logo"
-															src={`http://image.tmdb.org/t/p/w500/${details.production_companies[0].logo_path}`}
-														/>
+														{details.production_companies[0]?.logo_path ? (
+															<>
+																<Image
+																	width={200}
+																	height={200}
+																	alt="logo"
+																	src={`http://image.tmdb.org/t/p/w500/${details.production_companies[0].logo_path}`}
+																/>
+																<br />
+																<span style={{color: "white"}}>{details.production_companies[0].name}</span>
+															</>
+														) : (
+															<span>Company Data Not Found</span>
+														)}
 													</div>
 												</div>
 											</div>

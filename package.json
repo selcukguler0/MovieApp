@@ -10,6 +10,8 @@
     "sass-dev": "sass --watch --update --style=expanded /public/assets/scss:assets/css"
   },
   "dependencies": {
+    "@next-auth/prisma-adapter": "^1.0.4",
+    "@prisma/client": "^4.1.1",
     "bootstrap": "^5.0.1",
     "next": "12.1.0",
     "next-auth": "^4.10.3",
@@ -17,15 +19,13 @@
     "react-bootstrap": "^2.2.1",
     "react-dom": "17.0.2",
     "react-loader-spinner": "^5.1.7-beta.1",
-    "react-svg": "^15.1.4",
     "react-timer-hook": "^3.0.5",
-    "swiper": "^8.0.7",
-    "three": "^0.124.0",
-    "vanta": "^0.5.21"
+    "swiper": "^8.0.7"
   },
   "devDependencies": {
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
+    "prisma": "^4.1.1",
     "sass": "^1.54.3"
   }
 }

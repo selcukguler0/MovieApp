@@ -11,10 +11,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 	return (
 		<SessionProvider value={session}>
 			<Head>
-				<title>Anftiz- NFT Marketplace React Next.js Template</title>
+				<title>MovieDB</title>
 				<meta
 					name="description"
-					content="Anftiz is a full-fledged NFT or Digital assets marketplace HTML template. It is suitable for selling NFTs, or non-fungible tokens, Digital Arts, Digital Music & All types of Digital Assets. You can create, sell & collect NFT’s or digital assets through this website."
+					content="Explore movies."
 				/>
 				<link rel="icon" type="image/png" href="assets/images/favicon.png" />
 			</Head>

@@ -73,7 +73,7 @@ const Header = () => {
 								onChange={searchHandler}
 								onFocus={searchHandler}
 								placeholder="Search movies"></input>
-							<button type="button">
+							<button onClick={() => searchRef.current.focus()} type="button">
 								<i className="icofont-search-2"></i>
 							</button>
 							<ul
@@ -263,12 +263,6 @@ const Header = () => {
 								</div>
 							</div>
 						</div>
-
-						<button className="menu-trigger header__btn" id="menu05">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
 					</div>
 				</div>
 			</header>

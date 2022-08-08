@@ -9,7 +9,7 @@ import { InfinitySpin } from "react-loader-spinner"; //Loader
 const Explore = () => {
 	const [movies, setMovies] = useState(null);
 	const [genres, setGenres] = useState(null);
-	const [selectedGenres, setSelectedGenres] = useState(null);
+	const [selectedGenres, setSelectedGenres] = useState([]);
 	useEffect(() => {
 		async function fetchData() {
 			//Math.floor(Math.random() * 100) random movies every time
@@ -21,14 +21,15 @@ const Explore = () => {
 
 	const genreOnChange = async (e) => {
 		const { value } = e.target;
-		console.log(e.target.checked);
+		console.log("e.target.checked", e.target.checked);
+		console.log("selectedGenres", selectedGenres);
 		if (e.target.checked) {
-			selectedGenres === null
+			selectedGenres === undefined
 				? setSelectedGenres([value])
-				: setSelectedGenres(...selectedGenres, [value]);
+				: setSelectedGenres((selectedGenres) => [...selectedGenres, value]);
 			console.log("selectedGenresAdd", selectedGenres);
 		} else {
-			setSelectedGenres(await selectedGenres.filter((e) => e !== value));
+			setSelectedGenres(selectedGenres.filter((e) => e !== value));
 			console.log(
 				"selectedGenresRemove",
 				selectedGenres.filter((e) => e !== value)
@@ -93,8 +94,8 @@ const Explore = () => {
 												data-bs-parent="#accordionExample">
 												<div className="accordion-body">
 													<div className="form-check">
-														{genres.map((item) => (
-															<>
+														{genres.map((item,i) => (
+															<div key={i}>
 																<label className="form-check-label">
 																	{item.name}
 																</label>
@@ -106,7 +107,7 @@ const Explore = () => {
 																	onChange={genreOnChange}
 																/>
 																<br />
-															</>
+															</div>
 														))}
 													</div>
 												</div>

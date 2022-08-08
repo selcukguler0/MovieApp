@@ -23,7 +23,9 @@ const Explore = () => {
 		const { value } = e.target;
 		console.log(e.target.checked);
 		if (e.target.checked) {
-			selectedGenres === null ? setSelectedGenres([value]) : setSelectedGenres([...selectedGenres, value]);
+			selectedGenres === null
+				? setSelectedGenres([value])
+				: setSelectedGenres(...selectedGenres, [value]);
 			console.log("selectedGenresAdd", selectedGenres);
 		} else {
 			setSelectedGenres(await selectedGenres.filter((e) => e !== value));
@@ -34,10 +36,10 @@ const Explore = () => {
 		}
 		console.log("selectedGenresAll", selectedGenres);
 		setMovies(await GetMoviesByGenre(selectedGenres));
-	}
+	};
 	const sortOnChange = async (e) => {
 		setMovies(await GetMoviesByGenre(selectedGenres, e.target.value));
-	}
+	};
 
 	if (!movies || !genres) {
 		return (
@@ -56,11 +58,15 @@ const Explore = () => {
 							<div className="col-lg-9">
 								<div className="explore-wrapper explore-load">
 									<div className="row g-4">
-										{movies.length === 0 ? <div>No movies Found</div> : movies.map((item) => (
-											<div className="col-xl-4 col-md-6" key={item.id}>
-												<ProductSingle data={item} />
-											</div>
-										))}
+										{movies.length === 0 ? (
+											<div>No movies Found</div>
+										) : (
+											movies.map((item) => (
+												<div className="col-xl-4 col-md-6" key={item.id}>
+													<ProductSingle data={item} />
+												</div>
+											))
+										)}
 									</div>
 								</div>
 							</div>
@@ -182,153 +188,6 @@ const Explore = () => {
 															htmlFor="vote_average.asc"
 															className="form-check-label">
 															Vote Asc
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="accordion-item">
-											<h2 className="accordion-header" id="headingThree">
-												<button
-													className="accordion-button collapsed"
-													type="button"
-													data-bs-toggle="collapse"
-													data-bs-target="#collapseThree"
-													aria-expanded="false"
-													aria-controls="collapseThree">
-													<i className="icofont-library"></i> Collections
-												</button>
-											</h2>
-											<div
-												id="collapseThree"
-												className="accordion-collapse collapse"
-												aria-labelledby="headingThree"
-												data-bs-parent="#accordionExample">
-												<div className="accordion-body">
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Dark Cat Mewo"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Dark Cat Mewo
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Space_Riderz"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Space_Riderz
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Mimi_chika chao"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Mimi_chika chao
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Trending_Sculpture"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Trending_Sculpture
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Happy_hellwon"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Happy_hellwon
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Rock dA_ Crypto"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Rock dA_ Crypto
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Trdzng_Sxpture"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Trdzng_Sxpture
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Mickao_Flyn re"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Mickao_Flyn re
-														</label>
-													</div>
-													<div className="form-check">
-														<input
-															className="form-check-input"
-															type="checkbox"
-															value="Coffiinnee_de Mritto"
-															id="ethereum"
-															onChange={(event) =>
-																productSearch(event.target.value)
-															}
-														/>
-														<label className="form-check-label">
-															Coffiinnee_de Mritto
 														</label>
 													</div>
 												</div>
